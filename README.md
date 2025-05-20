@@ -1,6 +1,24 @@
 # Azure-Defender-Plan-Audit
 Audits the Azure Defender plan for services to determine if Free or Standard Tier. Using the Free Tier can introduce security weaknesses into your account and subscriptions. 
 
+# Example Output
+| Subscription            | DefenderPlan       | PricingTier | IsServiceInUse |
+|-------------------------|--------------------|-------------|----------------|
+| Dev Subscription        | VirtualMachines    | Standard    | Yes            |
+| Dev Subscription        | AppServices        | Free        | No             |
+| Dev Subscription        | KubernetesService  | Standard    | Yes            |
+| Dev Subscription        | SqlServers         | Free        | No             |
+| Dev Subscription        | StorageAccounts    | Standard    | Yes            |
+| Dev Subscription        | Arm                | Free        | Yes            |
+| Dev Subscription        | Dns                | Free        | No             |
+| Production Subscription | VirtualMachines    | Standard    | Yes            |
+| Production Subscription | AppServices        | Standard    | Yes            |
+| Production Subscription | KubernetesService  | Free        | No             |
+| Production Subscription | SqlServers         | Standard    | Yes            |
+| Production Subscription | StorageAccounts    | Standard    | Yes            |
+| Production Subscription | Arm                | Free        | Yes            |
+| Production Subscription | Dns                | Free        | Yes            |
+
 # Key Risks of Using the Free Tier in Defender for Cloud:
 ## 1. No Advanced Threat Detection
 
